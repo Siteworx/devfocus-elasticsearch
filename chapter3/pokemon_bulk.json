@@ -7,7 +7,7 @@
 { "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "4" } }
 { "ndex": 4, "name": "Charmander"}
 { "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "5" } }
-{ "ndex": 5, "name": "harmeleon"}
+{ "ndex": 5, "name": "Charmeleon"}
 { "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "6" } }
 { "ndex": 6, "name": "Charizard"}
 { "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "7" } }
