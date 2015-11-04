@@ -6,7 +6,13 @@
     "mappings": {
         "pokemon": {
             "properties": {
-            
+                "ndex": {
+                    "type": "integer",
+                    "null_value": 0
+                },
+                "name": {
+                    "type": "string"
+                }
             }
         }
     }

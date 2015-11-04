@@ -1,39 +1,39 @@
 ﻿{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "1" } }
-{ "ndex": 1, "name": "Bulbasaur" }
+{ "ndex": 1, "name": "Bulbasaur", "date_captured": "2015-01-01", "has_evolution": true, "evolution": "Ivysaur", "type": ["Grass","Poison"], "hm": [{"id":"HM01", "name": "Cut"}, {"id":"HM04", "name": "Strength"}], "how_to_find": [{"game": "Red", "method": "Starter"}, {"game": "Blue", "method": "Starter"}, {"game": "Gold", "method": ["Event", "Time Capsule"]}, {"game": "Silver", "method": ["Event", "Time Capsule"]}] }
 { "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "2" } }
-{ "ndex": 2, "name": "Ivysaur" }
+{ "ndex": 2, "name": "Ivysaur", "date_captured": "2015-01-02", "has_evolution": true, "evolution": "Venusaur", "type": ["Grass","Poison"], "hm": [{"id":"HM01", "name": "Cut"}, {"id":"HM04", "name": "Strength"}], "how_to_find": [{"game": "Red", "method": "Evolve"}, {"game": "Blue", "method": "Evolve"}, {"game": "Gold", "method": "Time Capsule"}, {"game": "Silver", "method": "Time Capsule"}] }
 { "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "3" } }
-{ "ndex": 3, "name": "Venusaur"}
+{ "ndex": 3, "name": "Venusaur", "date_captured": "2015-01-03", "has_evolution": false, "type": ["Grass","Poison"], "hm": [{"id":"HM01", "name": "Cut"}, {"id":"HM04", "name": "Strength"}], "how_to_find": [{"game": "Red", "method": "Evolve"}, {"game": "Blue", "method": "Evolve"}, {"game": "Gold", "method": "Time Capsule"}, {"game": "Silver", "method": "Time Capsule"}] }
 { "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "4" } }
-{ "ndex": 4, "name": "Charmander"}
+{ "ndex": 4, "name": "Charmander", "date_captured": "2015-02-01", "has_evolution": true, "evolution": "Charmeleon", "type": "Fire", "hm": [{"id":"HM01", "name": "Cut"}, {"id":"HM04", "name": "Strength"}], "how_to_find": [{"game": "Red", "method": "Starter"}, {"game": "Blue", "method": "Starter"}, {"game": "Gold", "method": ["Event", "Time Capsule"]}, {"game": "Silver", "method": ["Event", "Time Capsule"]}] }
 { "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "5" } }
-{ "ndex": 5, "name": "Charmeleon"}
+{ "ndex": 5, "name": "Charmeleon", "date_captured": "2015-02-02", "has_evolution": true, "evolution": "Charizard", "type": "Fire", "hm": [{"id":"HM01", "name": "Cut"}, {"id":"HM04", "name": "Strength"}], "how_to_find": [{"game": "Red", "method": "Evolve"}, {"game": "Blue", "method": "Evolve"}, {"game": "Gold", "method": "Time Capsule"}, {"game": "Silver", "method": "Time Capsule"}]}
 { "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "6" } }
-{ "ndex": 6, "name": "Charizard"}
+{ "ndex": 6, "name": "Charizard", "date_captured": "2015-02-03", "has_evolution": false, "type": ["Fire", "Flying"], "hm": [{"id":"HM01", "name": "Cut"}, {"id":"HM02", "name": "Fly"}, {"id":"HM04", "name": "Strength"}], "how_to_find": [{"game": "Red", "method": "Evolve"}, {"game": "Blue", "method": "Evolve"}, {"game": "Gold", "method": "Time Capsule"}, {"game": "Silver", "method": "Time Capsule"}]}
 { "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "7" } }
-{ "ndex": 7, "name": "Squirtle"}
+{ "ndex": 7, "name": "Squirtle", "date_captured": "2015-03-01", "has_evolution": true, "evolution": "Wartortle", "type": "Water", "hm": [{"id":"HM03", "name": "Surf"}, {"id":"HM04", "name": "Strength"}, {"id":"HM05", "name": "Waterfall"}], "how_to_find": [{"game": "Red", "method": "Starter"}, {"game": "Blue", "method": "Starter"}, {"game": "Gold", "method": ["Event", "Time Capsule"]}, {"game": "Silver", "method": ["Event", "Time Capsule"]}]}
 { "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "8" } }
-{ "ndex": 8, "name": "Wartortle"}
+{ "ndex": 8, "name": "Wartortle", "date_captured": "2015-03-02", "has_evolution": true, "evolution": "Blastoise", "type": "Water", "hm": [{"id":"HM03", "name": "Surf"}, {"id":"HM04", "name": "Strength"}, {"id":"HM05", "name": "Waterfall"}], "how_to_find": [{"game": "Red", "method": "Evolve"}, {"game": "Blue", "method": "Evolve"}, {"game": "Gold", "method": "Time Capsule"}, {"game": "Silver", "method": "Time Capsule"}]}
 { "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "9" } }
-{ "ndex": 9, "name": "Blastoise"}
+{ "ndex": 9, "name": "Blastoise", "date_captured": "2015-03-03", "has_evolution": false, "type": "Water", "hm": [{"id":"HM03", "name": "Surf"}, {"id":"HM04", "name": "Strength"}, {"id":"HM05", "name": "Waterfall"}], "how_to_find": [{"game": "Red", "method": "Evolve"}, {"game": "Blue", "method": "Evolve"}, {"game": "Gold", "method": "Time Capsule"}, {"game": "Silver", "method": "Time Capsule"}]}
 { "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "10" } }
-{ "ndex": 10, "name": "Caterpie"}
+{ "ndex": 10, "name": "Caterpie", "date_captured": "2015-04-01", "has_evolution": true, "evolution": "Metapod", "type": "Bug", "how_to_find": [{"game": "Red", "method": "Catch"}, {"game": "Blue", "method": "Catch"}, {"game": "Gold", "method": ["Catch", "Reward"]}, {"game": "Silver", "method": ["Catch", "Reward"]}]}
 { "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "11" } }
-{ "ndex": 11, "name": "Metapod"}
+{ "ndex": 11, "name": "Metapod", "date_captured": "2015-04-02", "has_evolution": true, "evolution": "Butterfree", "type": "Bug", "how_to_find": [{"game": "Red", "method": ["Catch", "Evolve"]}, {"game": "Blue", "method": ["Catch", "Evolve"]}, {"game": "Gold", "method": ["Catch", "Evolve", "Reward"]}, {"game": "Silver", "method": ["Catch", "Evolve", "Reward"]}]}
 { "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "12" } }
-{ "ndex": 12, "name": "Butterfree"}
+{ "ndex": 12, "name": "Butterfree", "date_captured": "2015-04-03", "has_evolution": false, "type": "Bug", "how_to_find": [{"game": "Red", "method": "Evolve"}, {"game": "Blue", "method": "Evolve"}, {"game": "Gold", "method": ["Catch", "Evolve", "Reward"]}, {"game": "Silver", "method": ["Catch", "Evolve", "Reward"]}]}
 { "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "13" } }
-{ "ndex": 13, "name": "Weedle"}
+{ "ndex": 13, "name": "Weedle", "date_captured": "2015-05-01", "has_evolution": true, "evolution": "Kakuna", "type": ["Bug", "Poison"], "how_to_find": [{"game": "Red", "method": "Catch"}, {"game": "Blue", "method": "Catch"}, {"game": "Gold", "method": ["Catch", "Reward"]}, {"game": "Silver", "method": ["Catch", "Reward"]}]}
 { "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "14" } }
-{ "ndex": 14, "name": "Kakuna"}
+{ "ndex": 14, "name": "Kakuna", "date_captured": "2015-05-02", "has_evolution": true, "evolution": "Beedrill", "type": ["Bug", "Poison"], "how_to_find": [{"game": "Red", "method": ["Catch", "Evolve"]}, {"game": "Blue", "method": ["Catch", "Evolve"]}, {"game": "Gold", "method": ["Catch", "Evolve", "Reward"]}, {"game": "Silver", "method": ["Catch", "Evolve", "Reward"]}]}
 { "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "15" } }
-{ "ndex": 15, "name": "Beedrill"}
+{ "ndex": 15, "name": "Beedrill", "date_captured": "2015-05-03", "has_evolution": false, "type": ["Bug", "Poison"], "hm": {"id":"HM01", "name": "Cut"}, "how_to_find": [{"game": "Red", "method": "Evolve"}, {"game": "Blue", "method": "Evolve"}, {"game": "Gold", "method": ["Catch", "Evolve", "Reward"]}, {"game": "Silver", "method": ["Catch", "Evolve", "Reward"]}]}
 { "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "16" } }
-{ "ndex": 16, "name": "Pidgey"}
+{ "ndex": 16, "name": "Pidgey", "date_captured": "2015-06-01", "has_evolution": true, "evolution": "Pidgeotto", "type": ["Normal", "Flying"], "hm": {"id":"HM02", "name": "Fly"}, "how_to_find": [{"game": "Red", "method": "Catch"}, {"game": "Blue", "method": "Catch"}, {"game": "Gold", "method": "Catch"}, {"game": "Silver", "method": "Catch"}]}
 { "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "17" } }
-{ "ndex": 17, "name": "Pidgeotto"}
+{ "ndex": 17, "name": "Pidgeotto", "date_captured": "2015-06-02", "has_evolution": true, "evolution": "Pidgeot", "type": ["Normal", "Flying"], "hm": {"id":"HM02", "name": "Fly"}, "how_to_find": [{"game": "Red", "method": ["Catch", "Evolve"]}, {"game": "Blue", "method": ["Catch", "Evolve"]}, {"game": "Gold", "method": ["Catch", "Evolve"]}, {"game": "Silver", "method": ["Catch", "Evolve"]}]}
 { "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "18" } }
-{ "ndex": 18, "name": "Pidgeot"}
+{ "ndex": 18, "name": "Pidgeot", "date_captured": "2015-06-03", "has_evolution": false, "type": ["Normal", "Flying"], "hm": {"id":"HM02", "name": "Fly"}, "how_to_find": [{"game": "Red", "method": "Evolve"}, {"game": "Blue", "method": "Evolve"}, {"game": "Gold", "method": "Evolve"}, {"game": "Silver", "method": "Evolve"}]}
 { "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "19" } }
 { "ndex": 19, "name": "Rattata"}
 { "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "20" } }
