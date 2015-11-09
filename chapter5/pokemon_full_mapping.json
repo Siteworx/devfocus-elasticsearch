@@ -5,14 +5,7 @@
                 "type": "integer"
             },
             "name": {
-                "type": "string",
-                "index": "analyzed",
-                "fields": {
-                    "raw": {
-                        "type": "string",
-                        "index": "not_analyzed"
-                    }
-                }
+                "type": "string"
             },
             "date_captured": {
                 "type": "date",
@@ -20,26 +13,6 @@
             },
             "has_evolution": {
                 "type": "boolean"
-            },
-            "evolution": {
-                "type": "string",
-                "index": "analyzed",
-                "fields": {
-                    "raw": {
-                        "type": "string",
-                        "index": "not_analyzed"
-                    }
-                }
-            },
-            "type": {
-                "type": "string",
-                "index": "analyzed",
-                "fields": {
-                    "raw": {
-                        "type": "string",
-                        "index": "not_analyzed"
-                    }
-                }
             }
         }
     }
