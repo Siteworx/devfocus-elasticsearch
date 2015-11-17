@@ -1,0 +1,302 @@
+﻿{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "1" } }
+{ "ndex": 1, "name": "Bulbasaur", "date_captured": "2015-01-01", "has_evolution": true, "evolution": "Ivysaur", "type": ["Grass","Poison"], "hm": [{"id":"HM01", "name": "Cut"}, {"id":"HM04", "name": "Strength"}], "how_to_find": [{"game": "Red", "method": "Starter"}, {"game": "Blue", "method": "Starter"}, {"game": "Gold", "method": ["Event", "Time Capsule"]}, {"game": "Silver", "method": ["Event", "Time Capsule"]}] }
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "2" } }
+{ "ndex": 2, "name": "Ivysaur", "date_captured": "2015-01-02", "has_evolution": true, "evolution": "Venusaur", "type": ["Grass","Poison"], "hm": [{"id":"HM01", "name": "Cut"}, {"id":"HM04", "name": "Strength"}], "how_to_find": [{"game": "Red", "method": "Evolve"}, {"game": "Blue", "method": "Evolve"}, {"game": "Gold", "method": "Time Capsule"}, {"game": "Silver", "method": "Time Capsule"}] }
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "3" } }
+{ "ndex": 3, "name": "Venusaur", "date_captured": "2015-01-03", "has_evolution": false, "type": ["Grass","Poison"], "hm": [{"id":"HM01", "name": "Cut"}, {"id":"HM04", "name": "Strength"}], "how_to_find": [{"game": "Red", "method": "Evolve"}, {"game": "Blue", "method": "Evolve"}, {"game": "Gold", "method": "Time Capsule"}, {"game": "Silver", "method": "Time Capsule"}] }
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "4" } }
+{ "ndex": 4, "name": "Charmander", "date_captured": "2015-02-01", "has_evolution": true, "evolution": "Charmeleon", "type": "Fire", "hm": [{"id":"HM01", "name": "Cut"}, {"id":"HM04", "name": "Strength"}], "how_to_find": [{"game": "Red", "method": "Starter"}, {"game": "Blue", "method": "Starter"}, {"game": "Gold", "method": ["Event", "Time Capsule"]}, {"game": "Silver", "method": ["Event", "Time Capsule"]}] }
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "5" } }
+{ "ndex": 5, "name": "Charmeleon", "date_captured": "2015-02-02", "has_evolution": true, "evolution": "Charizard", "type": "Fire", "hm": [{"id":"HM01", "name": "Cut"}, {"id":"HM04", "name": "Strength"}], "how_to_find": [{"game": "Red", "method": "Evolve"}, {"game": "Blue", "method": "Evolve"}, {"game": "Gold", "method": "Time Capsule"}, {"game": "Silver", "method": "Time Capsule"}]}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "6" } }
+{ "ndex": 6, "name": "Charizard", "date_captured": "2015-02-03", "has_evolution": false, "type": ["Fire", "Flying"], "hm": [{"id":"HM01", "name": "Cut"}, {"id":"HM02", "name": "Fly"}, {"id":"HM04", "name": "Strength"}], "how_to_find": [{"game": "Red", "method": "Evolve"}, {"game": "Blue", "method": "Evolve"}, {"game": "Gold", "method": "Time Capsule"}, {"game": "Silver", "method": "Time Capsule"}]}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "7" } }
+{ "ndex": 7, "name": "Squirtle", "date_captured": "2015-03-01", "has_evolution": true, "evolution": "Wartortle", "type": "Water", "hm": [{"id":"HM03", "name": "Surf"}, {"id":"HM04", "name": "Strength"}, {"id":"HM05", "name": "Waterfall"}], "how_to_find": [{"game": "Red", "method": "Starter"}, {"game": "Blue", "method": "Starter"}, {"game": "Gold", "method": ["Event", "Time Capsule"]}, {"game": "Silver", "method": ["Event", "Time Capsule"]}]}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "8" } }
+{ "ndex": 8, "name": "Wartortle", "date_captured": "2015-03-02", "has_evolution": true, "evolution": "Blastoise", "type": "Water", "hm": [{"id":"HM03", "name": "Surf"}, {"id":"HM04", "name": "Strength"}, {"id":"HM05", "name": "Waterfall"}], "how_to_find": [{"game": "Red", "method": "Evolve"}, {"game": "Blue", "method": "Evolve"}, {"game": "Gold", "method": "Time Capsule"}, {"game": "Silver", "method": "Time Capsule"}]}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "9" } }
+{ "ndex": 9, "name": "Blastoise", "date_captured": "2015-03-03", "has_evolution": false, "type": "Water", "hm": [{"id":"HM03", "name": "Surf"}, {"id":"HM04", "name": "Strength"}, {"id":"HM05", "name": "Waterfall"}], "how_to_find": [{"game": "Red", "method": "Evolve"}, {"game": "Blue", "method": "Evolve"}, {"game": "Gold", "method": "Time Capsule"}, {"game": "Silver", "method": "Time Capsule"}]}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "10" } }
+{ "ndex": 10, "name": "Caterpie", "date_captured": "2015-04-01", "has_evolution": true, "evolution": "Metapod", "type": "Bug", "how_to_find": [{"game": "Red", "method": "Catch"}, {"game": "Blue", "method": "Catch"}, {"game": "Gold", "method": ["Catch", "Reward"]}, {"game": "Silver", "method": ["Catch", "Reward"]}]}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "11" } }
+{ "ndex": 11, "name": "Metapod", "date_captured": "2015-04-02", "has_evolution": true, "evolution": "Butterfree", "type": "Bug", "how_to_find": [{"game": "Red", "method": ["Catch", "Evolve"]}, {"game": "Blue", "method": ["Catch", "Evolve"]}, {"game": "Gold", "method": ["Catch", "Evolve", "Reward"]}, {"game": "Silver", "method": ["Catch", "Evolve", "Reward"]}]}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "12" } }
+{ "ndex": 12, "name": "Butterfree", "date_captured": "2015-04-03", "has_evolution": false, "type": "Bug", "how_to_find": [{"game": "Red", "method": "Evolve"}, {"game": "Blue", "method": "Evolve"}, {"game": "Gold", "method": ["Catch", "Evolve", "Reward"]}, {"game": "Silver", "method": ["Catch", "Evolve", "Reward"]}]}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "13" } }
+{ "ndex": 13, "name": "Weedle", "date_captured": "2015-05-01", "has_evolution": true, "evolution": "Kakuna", "type": ["Bug", "Poison"], "how_to_find": [{"game": "Red", "method": "Catch"}, {"game": "Blue", "method": "Catch"}, {"game": "Gold", "method": ["Catch", "Reward"]}, {"game": "Silver", "method": ["Catch", "Reward"]}]}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "14" } }
+{ "ndex": 14, "name": "Kakuna", "date_captured": "2015-05-02", "has_evolution": true, "evolution": "Beedrill", "type": ["Bug", "Poison"], "how_to_find": [{"game": "Red", "method": ["Catch", "Evolve"]}, {"game": "Blue", "method": ["Catch", "Evolve"]}, {"game": "Gold", "method": ["Catch", "Evolve", "Reward"]}, {"game": "Silver", "method": ["Catch", "Evolve", "Reward"]}]}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "15" } }
+{ "ndex": 15, "name": "Beedrill", "date_captured": "2015-05-03", "has_evolution": false, "type": ["Bug", "Poison"], "hm": {"id":"HM01", "name": "Cut"}, "how_to_find": [{"game": "Red", "method": "Evolve"}, {"game": "Blue", "method": "Evolve"}, {"game": "Gold", "method": ["Catch", "Evolve", "Reward"]}, {"game": "Silver", "method": ["Catch", "Evolve", "Reward"]}]}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "16" } }
+{ "ndex": 16, "name": "Pidgey", "date_captured": "2015-06-01", "has_evolution": true, "evolution": "Pidgeotto", "type": ["Normal", "Flying"], "hm": {"id":"HM02", "name": "Fly"}, "how_to_find": [{"game": "Red", "method": "Catch"}, {"game": "Blue", "method": "Catch"}, {"game": "Gold", "method": "Catch"}, {"game": "Silver", "method": "Catch"}]}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "17" } }
+{ "ndex": 17, "name": "Pidgeotto", "date_captured": "2015-06-02", "has_evolution": true, "evolution": "Pidgeot", "type": ["Normal", "Flying"], "hm": {"id":"HM02", "name": "Fly"}, "how_to_find": [{"game": "Red", "method": ["Catch", "Evolve"]}, {"game": "Blue", "method": ["Catch", "Evolve"]}, {"game": "Gold", "method": ["Catch", "Evolve"]}, {"game": "Silver", "method": ["Catch", "Evolve"]}]}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "18" } }
+{ "ndex": 18, "name": "Pidgeot", "date_captured": "2015-06-03", "has_evolution": false, "type": ["Normal", "Flying"], "hm": {"id":"HM02", "name": "Fly"}, "how_to_find": [{"game": "Red", "method": "Evolve"}, {"game": "Blue", "method": "Evolve"}, {"game": "Gold", "method": "Evolve"}, {"game": "Silver", "method": "Evolve"}]}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "19" } }
+{ "ndex": 19, "name": "Rattata"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "20" } }
+{ "ndex": 20, "name": "Raticate"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "21" } }
+{ "ndex": 21, "name": "Spearow"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "22" } }
+{ "ndex": 22, "name": "Fearow"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "23" } }
+{ "ndex": 23, "name": "Ekans"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "24" } }
+{ "ndex": 24, "name": "Arbok"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "25" } }
+{ "ndex": 25, "name": "Pikachu"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "26" } }
+{ "ndex": 26, "name": "Raichu"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "27" } }
+{ "ndex": 27, "name": "Sandshrew"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "28" } }
+{ "ndex": 28, "name": "Sandslash"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "29" } }
+{ "ndex": 29, "name": "Nidoran♀"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "30" } }
+{ "ndex": 30, "name": "Nidorina"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "31" } }
+{ "ndex": 31, "name": "Nidoqueen"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "32" } }
+{ "ndex": 32, "name": "Nidoran♂"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "33" } }
+{ "ndex": 33, "name": "Nidorino"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "34" } }
+{ "ndex": 34, "name": "Nidoking"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "35" } }
+{ "ndex": 35, "name": "Clefairy"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "36" } }
+{ "ndex": 36, "name": "Clefable"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "37" } }
+{ "ndex": 37, "name": "Vulpix"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "38" } }
+{ "ndex": 38, "name": "Ninetales"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "39" } }
+{ "ndex": 39, "name": "Jigglypuff"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "40" } }
+{ "ndex": 40, "name": "Wigglytuff"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "41" } }
+{ "ndex": 41, "name": "Zubat"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "42" } }
+{ "ndex": 42, "name": "Golbat"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "43" } }
+{ "ndex": 43, "name": "Oddish"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "44" } }
+{ "ndex": 44, "name": "Gloom"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "45" } }
+{ "ndex": 45, "name": "Vileplume"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "46" } }
+{ "ndex": 46, "name": "Paras"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "47" } }
+{ "ndex": 47, "name": "Parasect"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "48" } }
+{ "ndex": 48, "name": "Venonat"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "49" } }
+{ "ndex": 49, "name": "Venomoth"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "50" } }
+{ "ndex": 50, "name": "Diglett"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "51" } }
+{ "ndex": 51, "name": "Dugtrio"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "52" } }
+{ "ndex": 52, "name": "Meowth"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "53" } }
+{ "ndex": 53, "name": "Persian"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "54" } }
+{ "ndex": 54, "name": "Psyduck"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "55" } }
+{ "ndex": 55, "name": "Golduck"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "56" } }
+{ "ndex": 56, "name": "Mankey"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "57" } }
+{ "ndex": 57, "name": "Primeape"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "58" } }
+{ "ndex": 58, "name": "Growlithe"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "59" } }
+{ "ndex": 59, "name": "Arcanine"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "60" } }
+{ "ndex": 60, "name": "Poliwag"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "61" } }
+{ "ndex": 61, "name": "Poliwhirl"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "62" } }
+{ "ndex": 62, "name": "Poliwrath"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "63" } }
+{ "ndex": 63, "name": "Abra"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "64" } }
+{ "ndex": 64, "name": "Kadabra"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "65" } }
+{ "ndex": 65, "name": "Alakazam"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "66" } }
+{ "ndex": 66, "name": "Machop"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "67" } }
+{ "ndex": 67, "name": "Machoke"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "68" } }
+{ "ndex": 68, "name": "Machamp"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "69" } }
+{ "ndex": 69, "name": "Bellsprout"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "70" } }
+{ "ndex": 70, "name": "Weepinbell"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "71" } }
+{ "ndex": 71, "name": "Victreebel"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "72" } }
+{ "ndex": 72, "name": "Tentacool"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "73" } }
+{ "ndex": 73, "name": "Tentacruel"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "74" } }
+{ "ndex": 74, "name": "Geodude"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "75" } }
+{ "ndex": 75, "name": "Graveler"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "76" } }
+{ "ndex": 76, "name": "Golem"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "77" } }
+{ "ndex": 77, "name": "Ponyta"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "78" } }
+{ "ndex": 78, "name": "Rapidash"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "79" } }
+{ "ndex": 79, "name": "Slowpoke"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "80" } }
+{ "ndex": 80, "name": "Slowbro"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "81" } }
+{ "ndex": 81, "name": "Magnemite"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "82" } }
+{ "ndex": 82, "name": "Magneton"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "83" } }
+{ "ndex": 83, "name": "Farfetch'd"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "84" } }
+{ "ndex": 84, "name": "Doduo"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "85" } }
+{ "ndex": 85, "name": "Dodrio"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "86" } }
+{ "ndex": 86, "name": "Seel"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "87" } }
+{ "ndex": 87, "name": "Dewgong"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "88" } }
+{ "ndex": 88, "name": "Grimer"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "89" } }
+{ "ndex": 89, "name": "Muk"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "90" } }
+{ "ndex": 90, "name": "Shellder"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "91" } }
+{ "ndex": 91, "name": "Cloyster"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "92" } }
+{ "ndex": 92, "name": "Gastly"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "93" } }
+{ "ndex": 93, "name": "Haunter"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "94" } }
+{ "ndex": 94, "name": "Gengar"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "95" } }
+{ "ndex": 95, "name": "Onix"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "96" } }
+{ "ndex": 96, "name": "Drowzee"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "97" } }
+{ "ndex": 97, "name": "Hypno"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "98" } }
+{ "ndex": 98, "name": "Krabby"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "99" } }
+{ "ndex": 99, "name": "Kingler"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "100" } }
+{ "ndex": 100, "name": "Voltorb"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "101" } }
+{ "ndex": 101, "name": "Electrode"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "102" } }
+{ "ndex": 102, "name": "Exeggcute"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "103" } }
+{ "ndex": 103, "name": "Exeggutor"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "104" } }
+{ "ndex": 104, "name": "Cubone"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "105" } }
+{ "ndex": 105, "name": "Marowak"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "106" } }
+{ "ndex": 106, "name": "Hitmonlee"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "107" } }
+{ "ndex": 107, "name": "Hitmonchan"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "108" } }
+{ "ndex": 108, "name": "Lickitung"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "109" } }
+{ "ndex": 109, "name": "Koffing"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "110" } }
+{ "ndex": 110, "name": "Weezing"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "111" } }
+{ "ndex": 111, "name": "Rhyhorn"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "112" } }
+{ "ndex": 112, "name": "Rhydon"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "113" } }
+{ "ndex": 113, "name": "Chansey"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "114" } }
+{ "ndex": 114, "name": "Tangela"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "115" } }
+{ "ndex": 115, "name": "Kangaskhan"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "116" } }
+{ "ndex": 116, "name": "Horsea"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "117" } }
+{ "ndex": 117, "name": "Seadra"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "118" } }
+{ "ndex": 118, "name": "Goldeen"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "119" } }
+{ "ndex": 119, "name": "Seaking"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "120" } }
+{ "ndex": 120, "name": "Staryu"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "121" } }
+{ "ndex": 121, "name": "Starmie"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "122" } }
+{ "ndex": 122, "name": "Mr. Mime"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "123" } }
+{ "ndex": 123, "name": "Scyther"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "124" } }
+{ "ndex": 124, "name": "Jynx"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "125" } }
+{ "ndex": 125, "name": "Electabuzz"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "126" } }
+{ "ndex": 126, "name": "Magmar"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "127" } }
+{ "ndex": 127, "name": "Pinsir"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "128" } }
+{ "ndex": 128, "name": "Tauros"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "129" } }
+{ "ndex": 129, "name": "Magikarp"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "130" } }
+{ "ndex": 130, "name": "Gyarados"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "131" } }
+{ "ndex": 131, "name": "Lapras"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "132" } }
+{ "ndex": 132, "name": "Ditto"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "133" } }
+{ "ndex": 133, "name": "Eevee"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "134" } }
+{ "ndex": 134, "name": "Vaporeon"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "135" } }
+{ "ndex": 135, "name": "Jolteon"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "136" } }
+{ "ndex": 136, "name": "Flareon"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "137" } }
+{ "ndex": 137, "name": "Porygon"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "138" } }
+{ "ndex": 138, "name": "Omanyte"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "139" } }
+{ "ndex": 139, "name": "Omastar"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "140" } }
+{ "ndex": 140, "name": "Kabuto"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "141" } }
+{ "ndex": 141, "name": "Kabutops"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "142" } }
+{ "ndex": 142, "name": "Aerodactyl"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "143" } }
+{ "ndex": 143, "name": "Snorlax"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "144" } }
+{ "ndex": 144, "name": "Articuno"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "145" } }
+{ "ndex": 145, "name": "Zapdos"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "146" } }
+{ "ndex": 146, "name": "Moltres"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "147" } }
+{ "ndex": 147, "name": "Dratini"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "148" } }
+{ "ndex": 148, "name": "Dragonair"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "149" } }
+{ "ndex": 149, "name": "Dragonite"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "150" } }
+{ "ndex": 150, "name": "Mewtwo"}
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "151" } }
+{ "ndex": 151, "name": "Mew"}
