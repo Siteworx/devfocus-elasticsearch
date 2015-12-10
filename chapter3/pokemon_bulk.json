@@ -1,4 +1,4 @@
-﻿{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "1" } }
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "1" } }
 { "ndex": 1, "name": "Bulbasaur" }
 { "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "2" } }
 { "ndex": 2, "name": "Ivysaur" }

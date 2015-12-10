@@ -1,4 +1,4 @@
-﻿{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "1" } }
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "1" } }
 { "ndex": 1, "name": "Bulbasaur", "date_captured": "2015-01-01", "has_evolution": true, "evolution": "Ivysaur", "type": ["Grass","Poison"], "hm": [{"id":"HM01", "name": "Cut"}, {"id":"HM04", "name": "Strength"}], "how_to_find": [{"game": "Red", "method": "Starter"}, {"game": "Blue", "method": "Starter"}, {"game": "Gold", "method": ["Event", "Time Capsule"]}, {"game": "Silver", "method": ["Event", "Time Capsule"]}] }
 { "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "2" } }
 { "ndex": 2, "name": "Ivysaur", "date_captured": "2015-01-02", "has_evolution": true, "evolution": "Venusaur", "type": ["Grass","Poison"], "hm": [{"id":"HM01", "name": "Cut"}, {"id":"HM04", "name": "Strength"}], "how_to_find": [{"game": "Red", "method": "Evolve"}, {"game": "Blue", "method": "Evolve"}, {"game": "Gold", "method": "Time Capsule"}, {"game": "Silver", "method": "Time Capsule"}] }

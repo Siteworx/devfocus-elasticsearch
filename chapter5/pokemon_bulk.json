@@ -1,4 +1,4 @@
-﻿{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "1" } }
+{ "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "1" } }
 { "ndex": 1, "name": "Bulbasaur", "date_captured": "2015-01-01", "has_evolution": true }
 { "index" : { "_index" : "pokedex", "_type" : "pokemon", "_id" : "2" } }
 { "ndex": 2, "name": "Ivysaur", "date_captured": "2015-01-02", "has_evolution": true }
