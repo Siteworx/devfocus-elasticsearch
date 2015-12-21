@@ -70,10 +70,10 @@
                     }
                 },
                 "height": {
-                    "type": "float"
+                    "type": "double"
                 },
                 "weight": {
-                    "type": "float"
+                    "type": "double"
                 }
             }
         }
