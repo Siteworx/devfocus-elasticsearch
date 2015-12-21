@@ -1,0 +1,43 @@
+Hello everyone and welcome back to the Siteworx Developer Focus Elasticsearch series.  As always, this is Jim, Senior Developer at Siteworx, and I'm glad to see you've made it today!
+
+Let's recap what we've done so far.  Up to this video, we have created an index and type for our pokemon dataset, and used the Bulk API to mass index some basic information about each pokemon.
+
+Next up is Chapter 4, writing our first queries.
+
+Today we will be writing basic search queries to run against our index.
+
+In the description below you will find links to download the setup files to use for today's chapter.  If you missed how to set up your index for each chapter, please go back and watch the Chapter 3 video again.  Please place all 3 files in the same folder, make sure Elasticsearch is running, and run setup.sh.  This should populate your index for today's lesson. (Use video from chapter 3 of setup running).
+
+
+Today we will be going over 4 types of queries: the match query, the range query, the fuzzy query, and the match all query.
+
+
+Let's start by setting up our query in the head plugin.  For most of this series, I am going to point the queries directly at the pokemon type so we can write shorter queries.  If we ran a query on the entire index, it would be a safer bet to use pokemon.name instead of just name in the query, but pointing directly at pokemon eliminates that risk.  This is followed by the search API command which is underscore search, and setting the REST call to use POST.
+
+Next, I will set up the query, which is the data we provide to the search API.  It will be in JSON format, just like when we indexed our data.  For now, our queries will be contained in a "query" property so that the search API knows what we are requesting.
+
+The first query type we will use is the match query.  This query can take text, numbers, and dates and automatically constructs a proper query for us, which makes it one of the easiest queries to set up as well.  Since this is a basic query, it will perform at the word level instead of the letter level.  This means we have to use the whole name of a Pokemon and not a partial name in order to get a match.  You can see that I am telling the match query to look specifically at the name field to find matches.  If you want to query across all fields, you can use underscore all instead of name as the field.  You can see here we query for Pikachu and Pidgey and get them back as results..
+
+In this chapter we will mostly get only one matching result per name we query.  But there is one interesting case I wanted to mention, the case of Nidoran.  For those who don't know, Nidoran's name in the Pokemon games is followed by a male or female symbol.  These symbols, like many other symbols, are not taken into account when doing basic indexing of a field.  So even though we see it in the source of the results, in the index itself the symbols have been stripped, which is why we get matches here without having the exact name written.  If we only wanted a specific one of these as our result, we can set up our field mapping a different way, but we will go over that later in the series.
+
+We can also do a match on our ndex, which is an integer instead of a string.  See here we query for the ndex of 5 and get back Charmeleon.
+
+This leads us into the second query type we will be looking at today: the range query.  Lucky for us the ndex field is the integer type which makes it perfect for range queries.  So we will convert this query into a range query and give it the greater than or equal to and less than or equal to properties.  Now this query will give us all Pokemon between and including numbers 5 through 20.  Our default data set only returns 10 results, but you can see at the top that the total has 16 results.
+
+The third query type we will go over today is the fuzzy query.  The fuzzy query has a lot of options to tweak its performance, but for now we will let it work with the default settings.  This type of query is great to use to help a user out if they've misspelled their query slightly, like I am doing here with Ninetales.  I purposely left out the E near the end so you can see the fuzzy query still found it.  There are limits to how far a fuzzy query will "fix" a misspelled word, but there are more advanced ways in Elasticsearch to handle misspellings that we may not have time to go over in this series.
+
+Finally, I will run the most basic query in Elasticsearch, the match all query.  This query simply returns every document as its result set.
+
+This concludes our chapter on basic querying of our Elasticsearch index.
+
+In this chapter, we learned how to write 4 basic queries: match, range, fuzzy, and match all.
+
+
+Next chapter we will look specifically at configuring fields.  This includes reviewing the standardfield types we can use in Elasticsearch.  We will also go over the properties or attributes that can be used to configure each field.
+
+
+This Siteworx Developer Focus Elasticsearch Series video is done.  Please collect your belongings and leave in an orderly fashion.  Thank you for watching and we hope you continue to enjoy this series.  This is Jim and have a great day.
+
+
+Pokémon © 2002-2015 Pokémon. © 1995-2015 Nintendo/Creatures Inc./GAME FREAK inc. TM, ® and Pokémon character names are trademarks of Nintendo.
+No copyright or trademark infringement is intended in using Pokémon content in this series.

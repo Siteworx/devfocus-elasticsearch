@@ -1,0 +1,53 @@
+Hello everyone and welcome back to the Siteworx Developer Focus Elasticsearch series.  As always, this is Jim, Senior Developer at Siteworx, as your host and guide on your elasticsearch adventure.
+
+Just to quickly recap what we've done so far, we have created a pokedex index, with a pokemon type, and indexed a few pokemon.  We also directly queried those pokemon.  Oh, and we decided to use pokemon as our sample content.
+
+Next up is Chapter 3, using the bulk API, which we will be using the setup our chapters going forward.
+
+Today we will be learning how to set up each chapter's index using Elasticsearch's Bulk indexing API.
+
+Also, please make sure that Elasticsearch is running before you begin any chapter.  Not that it has to be said, but none of what I go over will work quite right without it running.
+
+In the description below you will find links to download a few files to use for today's chapter: a setup.json, a pokemon_bulk.json, and a setup.sh.
+
+Today I will show you how we will use these files to set up for every lesson, but going forward I will refer viewers to this video to explain how to set up for each chapter.  Note that we generally wipe the index and start new every chapter, so if there's anything going forward that you'd prefer not to wipe out, please create a different index for that content.  Okay, so let's begin by opening up the setup.sh file to understand what's happening when we run this script.
+
+The first command runs a delete on the index, which wipes out everything.
+
+Next, we are creating the index again, using setup.json as our payload.  We will go over that file shortly, but just know that it will always contain the index settings and mappings that we need to begin our lesson.
+
+The third line uses elasticsearch's bulk API to mass index content.  For our example, our bulk content is stored in the pokemon_bulk.json file.  We will also go over this file shortly.
+
+
+Now let's open up setup.json to see what we are using to set up the index.  As you may recall from last chapter, we have the typical index settings for a development index, with one shard and no replicas.  We also have our pokemon type mapped with the properties we created last chapter: ndex and name, with their appropriate types set.
+
+Next, let's open our pokemon_bulk.json to go over how to set up content for bulk indexing.
+
+I decided that we should take advantage of the Bulk API because it is a quick way to get all of our pokemon into the index without much hassle.
+
+ As you can see, the file has 2 lines per pokemon: the index settings, and the content to index.  In the first line here, you can see that we are telling the bulk API to index this document in the pokedex index, under the type of pokemon, with the ID of 1.  Note that the line begins with the command of "index".  There are other commands that the bulk API can run such as update or delete, but for this chapter we will only be using index.  On the second line you can see we have the content for this document, which is the information about Bulbasaur, who we created in the previous chapter.  I also want to point out that the bulk json must always end in a newline according to the documentation, so I purposely create a newline at the very end of the file.
+
+Please note that there will be new versions of these files for every chapter, so be sure to download the correct ones linked in the description of each video
+
+Finally, let's run our setup shell script to get everything set up for this chapter.
+
+If you are using Windows and can't run the shell script, please run each of these curl requests inside it manually to set up for today's lesson.
+
+Now that everything has finished running, let's check our Elasticsearch head plugin to see if our bulk index was successful.  As you can see, my index has been recreated and it has 151 documents in it.  Yes, we will only be using Generation 1 Pokemon for the time being, as setting up data for more than those 151 would cost me more time and sanity than I can afford to lose.
+
+Now I know what you're all thinking, "why not have an intern do it?" Well believe it or not, asking "Hey Boss, can I borrow an intern to perform pokemon data entry for an entire day?" would probably be answered with plenty of laughter followed by a resounding no.
+
+And as you can see on the Browser tab, the pokemon are now indexed.
+
+
+This concludes our chapter on the Bulk API, and using it set up our chapter index
+
+In this chapter, we learned how to set up our index for each lesson using the Elasticsearch Bulk API
+
+In the next chapter, we will be learning some basic querying functionality and writing our first queries on our dataset.
+
+We hope you enjoyed your ride on the Developer Focus Elasticsearch Series.  Please remain seated with your hands and feed inside the index until the ride has come to a complete stop.  Thank you for watching and we hope you continue to enjoy this series.  This is Jim and have a great day.
+
+
+Pokémon © 2002-2015 Pokémon. © 1995-2015 Nintendo/Creatures Inc./GAME FREAK inc. TM, ® and Pokémon character names are trademarks of Nintendo.
+No copyright or trademark infringement is intended in using Pokémon content in this series.

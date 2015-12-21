@@ -1,0 +1,50 @@
+Welcome back, everyone, to the Siteworx Developer Focus Elasticsearch Series.  This is your host, Jim, Senior Developer at Siteworx.  I'm glad to see you've returned.
+
+Before we begin, let's recap.  The first ***FOUR*** chapters of this series helped get your feet wet and covered the basics of setting up Elasticsearch, including creating an index and type, as well as indexing and querying documents.  We also chose to use Pokemon as our data set and we're going to move forward with it into our next chapter, which is
+
+Chapter 5: Standard Types and Attributes
+
+Now we will begin digging into some more detailed and advanced functionality of Elasticsearch.  These features will hopefully help you set up your index exactly as you would like it to function.  
+
+In this chapter we will go over some of Elasticsearch's core types, such as String and Integer, which we used in Chapter 2, as well as boolean and date.  We will also go over some of the attributes, or options, that we can use to tell the index how to handle the fields we create using these types.  Finally, we will run some queries on the new fields.
+
+Before we set up our fields I want to quickly run over the setup for this chapter.  You can find the links to this chapter's setup files in the video description.  If you missed how to set up for each chapter, detailed instructions can be found in the Chapter 3 video.  In this chapter, the setup script will only build our index and create our type.  We will be adding all of the fields during this video.  Afterwards, we will manually run the bulk indexing API to populate the index.  Once you run setup.sh, you can check your Index Metadata in the Elasticsearch Head plugin and see the pokemon type is created, but has no properties.  Now, we're ready to begin.
+
+The first thing I'd like to do is go over some of the attributes available to us when setting up our fields.  In order to help you understand where to place these attributes, I'm going to first set up the mapping for the Name field, which is of type String.
+
+Now we're going to go over 4 common attributes that apply to most core types: index, boost, include_in_all, and copy_to.
+
+The index attribute allows us to tell the index whether or not to analyze and tokenize this field.  Analyzing and Tokenizing basically means taking the value and breaking it down into smaller parts based on how you want to search this field.  While we will mostly use the standard analyzer and tokenizer in this series, there may be a few cases where we change them in the later chapters.
+Anyway, the default for this attribute is "analyzed" which means all fields by default get analyzed and tokenized when a document is indexed.  The other options available are "no", which makes this field unsearchable, as well as "not_analyzed" specifically for String field types. "not_analyzed" is an incredibly useful option and necessary for fields you may want to sort on or do exact queries on.  We will use the Term query later in this chapter to demonstrate the value of a "not_analyzed" field.
+
+include_in_all allows us to tell the index whether or not we want this field to be queried when a query on _all is performed.  Sometimes there will be a field that we only want to query in specific cases, but not in a general search.  This attribute can be set to "false" to not include it, but defaults to true.
+
+The boost attribute allows us to set the importance of a field when it comes to querying all fields.  Say I run a query on _all for Ivysaur.  I will most likely get back 2 pokemon, Bulbasaur and Ivysaur.  Bulbasaur will return because I have his evolution named within the document, and Ivysaur because that's its name.  Now, if I wanted to do my best to have the pokemon with the name that I queried be the first result returned, I can add a boost attribute set to 2.0 to the name field.  This basically tells the index to give bonus points to a document where the queried text is found in the name field, which will help "boost" it to be higher in the results.
+
+The last attribute we will go over is the copy_to attribute.  This allows us to copy all values for a particular field into another field.  Let's say we wanted to store all translations of a Pokemon's name in a "names" field, and we wanted the main "name" field to be automatically be copied into that list, we could create the names field and set our copy_to to that field.  This ensures that the main name is also added to the list of all possible names for the pokemon.
+
+There are many other attributes that can be found in the Elasticsearch Documentation, but for now we've covered some of the commonly seen ones.  I'm going to leave the boost on the name field and send the request to create the name field (as we will do with all of the following mappings), and move on.
+
+Now that we've covered creating a string field, let's move onto some other core types: integer, boolean, and date.
+
+Right now I am making the ndex field, which is of type integer.  There are many other number types, such as float, double, and long, that are set up exactly the same way.  But as we went over in chapter 2, integer will work great for the ndex number which identifies each pokemon.
+
+Next we are creating the "has_evolution" Boolean field.  This field is simply used to show if a pokemon has an evolution.  This field will accept true or false as a value when indexing.
+
+Our final core type is date.  Since we are creating a pokedex, I thought it made sense to store the "date_captured" so that the system knows when this data was captured about the pokemon.  The date field also takes a unique attribute: format.  This is so we can tell the index what format they should expect the data to be indexed in, so it can convert it appropriately behind the scenes.
+
+Finally, we should refresh our page and load up our Index Metadata to see all of the fields we created in this chapter.
+
+Now that our mappings are all set up, let's bulk index our pokemon.  Once that's finished, let's load up Bulbasaur and see how all of the fields and their values will now appear in the index.  You can see all of our different types here with their appropriate values.
+
+Now let's run some queries!  We already ran queries on the String and Integer fields in chapter 2, so let's focus on the Boolean and Date fields.
+
+Here's a match query on our has_evolution field.  It's a pretty simple query, as Boolean fields can either be true or false and nothing else.  Still, it can be valuable information to be able to query on.
+
+Finally, let's try a date range query on our date captured field.  We did a range query in Chapter 2 for a number and provided greater than and less than numbers for the range, but for a date range query we need to provide dates in the same format as we set up in the mapping.  Another neat feature of date range queries is we can provide the word "now" as a greater than or less than value.  That will automatically use your system date as the value.
+
+This concludes our chapter on Standard Elasticsearch types and attributes.  In this chapter, we learned about core field types, different attributes we can use to configure them, and ran some queries to show what we can request from the index using these fields.
+
+In the next chapter, we will be looking at some more complex types in Elasticsearch, and the extremely useful Multifields.
+
+Thank you for joining me for an enchanting evening of Elasticsearch Developer Focus.  This is your host, Jim, hoping you have a great night and I look forward to seeing you next chapter.

@@ -1,0 +1,32 @@
+As the Elasticsearch documentation states, an index is a collection of documents that are very similar in nature. Common types of indexes are collections of web pages, or user information, or you might find some sites using one for the products in their catalog.  After much discussion and debate with my fellow developers, we have come to the decision that our example data set for this series would be a tribute one of the greatest indexes of our time, the Pokedex.  So we will be creating our own pokedex, or index of pokemon, to use as our data set for this series.
+
+
+So now let's create our index.  I am going to initially create it using CURL so that you can see how any request to Elasticsearch can be written using CURL.  But going forward, I will be performing all of my requests through the Head plugin to make the JSON document we send with the request easier to read.
+
+You can see here that I am using the PUT REST API to tell Elasticsearch that I want to create a new index with the name pokedex.  I am settings my number of shards to 1 and number of replicas to 0 because this is a developer instance and I don't plan on using any replication in this series.  Once I submit it I get back a response from Elasticsearch telling me my index has been created.
+
+Now I am going to delete the index and recreate it using Elasticsearch Head.  I will be using the Any Request tab in order to write my request.  You can see I am populating the fields with different parts of the same string I used in the CURL request.  Once everything is filled out, I click Request and get the same successful response back, and if we go back to Overview we can see our index is back.
+
+Right now our pokedex is pretty useless.  What we need to do next is create a type in our index that will represent all of our pokemon.  A type is a category or section of our index where all of the documents have common fields.  In our case, every pokemon we enter into the index will have the same fields available to them so we can put them all under one type.  If at some point we wanted to add gyms to our index, we could create a gym type and all of the gym documents would share a different set of common fields.
+
+I am going to start by zooming in my browser so everything I write is easier to read.
+
+Now I'm going to create a mapping for our pokemon type and assign it one property, the ndex or National Pokedex Number.  I am going to give it the type of integer since it is a number, and give it a null value of zero.  This ensures that this property will always return a value even if we don't always set it for every document.  Then I will click request and get the success message from Elasticsearch.  We can go to our browser tab to see the type and field we just created, and we can go back to the overview tab and view the index metadata to see the type mapping is there as well.
+
+The mapping API can also be used to add fields to an existing type.  Here I am adding the name field to the pokemon type with the type of string.  You can also see that it's been added to the pokemon type in the index metadata.
+
+Finally, we are ready to add documents to our index. A Document is a unique set of information that we send to the index that we want to make available to our search queries.  They are separated into individual elements, such as a single Web Page, user, product, or in our case, a single pokemon.  Let's begin by adding the first pokemon in the pokedex to our index: bulbasaur.
+
+So let's go back to our Any Request tab and fill in the details needed to tell Elasticsearch how to index our document.  We are going to point the request at the pokedex index, followed by the pokemon type, and finally the ID we are assigning to this document.  Since Bulbasaur is the first pokemon, we will give it the ID of one and change this to a PUT request.
+
+Now I have to set up this document's data based on the fields we mapped when we created the pokemon type.  I am going to give this document a name, "Bulbasaur", and an ndex of 1.  Then I will hit request and get back a successful creation response.  A successful creation response shows us the index, type, id, and version of this document, and a property of created set to true.
+
+And to see the document in the index, I am going to remove the data from the request and set it to use GET instead of PUT.  You'll see the response includes a found equals true and the source of this document, which matches what we just sent in.
+
+I am also going to quickly add Ivysaur, who is the pokemon with the ndex of 2, and verify its creation.  Finally, I am going to click the Browser tab to quickly view what is in our index so far.  You can see both Bulbasaur and Ivysaur are in the index.
+
+This concludes the second chapter in our Elasticsearch Developer Focus Series.  In this chapter, we have created our pokedex index, created our pokemon type, and created a few pokemon documents to populate our index.
+
+In the next chapter, we will be learning how to use Elasticsearch's Bulk API to populate our index at the start of each lesson.
+
+We at Siteworx thank you for watching and hope you continue to enjoy our Developer Focus Series on Elasticsearch.  This is Jim and have a great day.

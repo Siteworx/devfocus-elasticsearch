@@ -1,0 +1,91 @@
+00:00 - 00:20
+
+Hello and welcome to Siteworx Developer Focus.  My name is Jim, I am a Senior Developer at Siteworx, and I will be guiding you through our first Developer Focus series, which is on Elasticsearch.  
+
+00:20 - 00:37
+
+For those who don't know, Elasticsearch is a highly scalable, open-source, full-text search and analytics engine, and it's used for powering applications that have complex search features and requirements.  And that comes directly from the Elasticsearch Documentation.
+
+00:37 - 00:48
+
+The goal of this series is to help you get a good introduction to Elasticsarch and help get your feet off the ground so you can set up your own index and, hopefully, your own search API.
+
+00:48 - 01:13
+
+During this series, we will go over the setup that's needed for Elasticsearch, including installing Java and Elasticsearch itself, as well as setting up your first index, your first type, some documents, indexing those documents, and writing queries on those documents.  We will also cover features such as pagination, sorting, and aggregations (or facets).
+
+01:13 - 01:22
+
+My hopes for this series is that it gives you a better understanding of Elasticsearch and helps you on your way to setting up your own search engine.
+
+01:22 - 01:38
+
+During this series, I will be using Oracle VirtualBox running 32-bit CentOS, which is a Linux operating system.  I chose to use a virtual machine so I could start from scratch and show your every step necessary for installing Elasticsearch.
+
+01:38 - 01:55
+
+This is only one method of installing Elasticsearch, as it will work on any operating system that can run Java, including Windows.  I have also installed the GNOME Desktop Environment and Firefox for visual purposes in this series, but most of what I show can be done straight through command line as well.
+
+01:55 - 02:05
+
+If you need help installing CentOS on VirtualBox or the GNOME Desktop Environment, please see the links in this video's description.
+
+02:05 - 02:24
+
+I've already set up an additional non-root user who must not have sudo access.  This is a requirement for Elasticsearch that we will discuss later.  I'm going to use the root user to set up both Java and Elasticsearch, so let me log into root, and head to the /opt directory where we will be installing Java.
+
+02:24 - 02:44
+
+As you can see, I've already downloaded the TAR file for the Linux x86 (32-bit) Java 8 update 60 JDK into my /opt folder.  I used wget to download the JDK, and I've provided the link to the version we will use in the video's description.
+
+02:44 - 03:11
+
+So the first thing I'm going to do is untar this JDK in the /opt folder.  For more details on installing Java on CentOS, please visit the tutorial link from Digital Ocean in the video's description.  Now that the JDK is unpacked, I will make sure that the owner is root and then I am going to set up some alternatives.
+
+03:11 - 03:44
+
+I'm going to set up the alternatives for Java, JavaC, and the JAR commands.  And now to test them, you'll see I ran Java, it's there.  I'll check Java -version now, make sure that works.  JavaC -version, that works.  And JAR, which is there.  So everything is ready to go on the Java side.
+
+03:44 - 04:17
+
+Next we need to install Elasticsearch.  We will be using version 2.0 of Elasticsearch, and you can find the link to download this version in the video's description.  Elasticsearch 2.0 requires us to use a user without root permissions by default, and that's the way I am going to show you how to set it up.  So I am logging back into root to download Elasticsearch.  In this case I am using curl to download the TAR file and I'm downloading it to the /opt directory, which is the same place we installed Java.
+
+04:17 - 04:31
+
+Once it's done downloading, I'm going to untar the file, and give my user "jim" recursive ownership of this directory using the chown line seen here (chown -R jim elasticsearch-2.0.0).  This will allow the user jim to run Elasticsearch.
+
+04:31 - 04:57
+
+Now that the ownership is set, I am going to log out of root and log back into jim and run GNOME.  I have to open a terminal so I can use it to install Elasticsearch.  I'll head to the /opt folder, and go into the Elasticsearch directory and into its /bin folder.  I now have permissions to run Elasticsearch and will run it with the default configuration to make sure everything works.  And now, Elasticsearch is running.
+
+04:57 - 05:24
+
+Next, I am going to install the Elasticsearch head plugin.  This plugin offers us an easy to use interface to interact with Elasticsearch as well as get stats on our index.  The link to this plugin's installation instructions can be found in the video's description.  Now I am going to go into my configuration file and update my cluster name.
+
+05:24 - 06:10
+
+As you can see, Elastic decided to use a different node name, and it uses a different node name every time you start up Elastic unless you configure it to a specific name.  So we're going to go into our configuration file, and I'm going to update the cluster name and node name of everything I'm doing in Elastic.  I'm just going to set this one to jim-elasticsearch.  And I'm also going to update my node name so it always has the same one.  And so I am going to name the node Siteworx Developer Focus.  And we're just gonna go through the rest of the configuration file here.  There's not really much we're gonna update, but there are other options available.  You could always read Elastic's documentation to understand how those can affect your index.
+
+06:10 - 06:31
+
+Finally, after updating the configuration, we'll start up Elastic again and you'll see that it uses the node name that we gave it, which is Siteworx Developer Focus.  I wanted to start this up one more time so that we could look at the head plugin that I've installed previously.
+
+06:31 - 07:02
+
+You'll see here that you can hit the head plugin through a browser and it'll tell you some very useful information about Elasticsearch.  Right now since we don't have an index set up yet there's not as much to show.  But once we set up an index in the next lesson there will be more information here.  I also wanted to show the Any Request tab, because I will be using this a lot throughout this tutorial to give a visual aid for when you're writing queries to Elastic and getting results back.
+
+07:02 - 07:16
+
+And when we run a request from here it'll send a request to the Elasticsearch index and get back results and format the results so they're easy to read so we can really see what's in the index and what we're getting back from our queries.
+
+07:16 - 07:42
+
+This concludes the first chapter in our Elasticsearch series.  Now you should have some sort of operating system set up, either your own Windows, Linux, or as I'm doing, Linux through Virtualbox.  And you should have Java installed, as well as Elasticsearch installed with the head plugin to help us send queries to Elastic and get back results that we can read easily.
+
+07:42 - 07:53
+
+In the next chapter, we will go over creating our first index, a type in our index, and at least one document to be sent to the index.
+
+07:53 - 08:05
+
+We at Siteworx hope you found the information in this video useful, and will continue to learn about Elastic through our Developer Focus Series.  This is Jim and have a great day,

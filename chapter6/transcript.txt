@@ -1,0 +1,54 @@
+Siteworx Developer Focus Elasticsearch Series: For all your open source search needs.  This is your host, Jim, Senior Developer at Siteworx.  Are you ready?  Because I'm ready.
+
+Let's start with a quick recap.  As of this video, we've set up our index, type, and basic fields for our sample dataset which is the list of Generation 1 Pokemon.  We've also indexed them and run a few queries to help us understand the benefits of setting up our index as we have so far.  Now let's move onto our next chapter, which is
+
+Chapter 6: Object and Nested Types, and Multifields
+
+In the last chapter we went over some standard field types, but in this chapter we are going to create fields using the object and nested types, which help keep our data organized while also allowing us to perform better, more specific queries.  We will also be creating some Multifields as well as converting a standard field into a Multifield.  Once those are all set up, we will reindex our content and run some queries on them.
+
+As with the last few chapters, the setup files for this chapter are linked in the video description.  If you missed how to set up your index for each chapter, please go back and watch the Chapter 3 video.  Since we are setting up more fields in this chapter, the setup script will only build the index, and create the pokemon type with the fields we created in chapter 5.  After we add and update our fields in this video, we will manually run the Bulk API to populate the index.  Once you run setup.sh, you will see our index and type in the Index Metadata, with the properties we created last chapter.  Now it's time to get our hands dirty.
+
+Let's start with creating an object type.
+
+
+The object type allows us to have a field whose values can contain multiple fields.  I decided one of the best ways to explain this through our pokemon dataset is to add the list of Hidden Machines, or HMs, that this pokemon can learn.  Each HM has two fields, an id and a name, and both are Strings.  This way, I didn't have to create "hm_name" and "hm_id" as separate string fields with no relationship.  --EDIT--Now they are related to one another and can be queried through the object type's field name, such as hm.id or hm.name--/EDIT--
+
+
+Next let's look at the nested type.
+
+
+What you'll notice with the nested type is its mapping is very similar to the object type mapping.  But it is actually a very significant change, because it treats each set of values as its own document, and thus are queried as individual documents.  I decided to make a "how_to_find" field with the "include_in_parent" attribute to tell the index to treat these values as objects as well as nested, and the properties of "game" and "method".  This will allow us to index how to acquire a pokemon in a specific game.  Once we index our pokemon data I will go into further detail on how this type is used, but it basically allows us to only find documents where both "game" and "method" match the queried values within one object.  We go over actual nested queries in a few chapters.
+
+The last thing I want to go over before we run some queries is the concept of Multifields.  As you saw when we were creating the Name field, we could set the index attribute to "analyzed" or "not_analyzed".  Both have their uses, as analyzed is great for search, and "not_analyzed" is great for aggregations and sorting.  So I might want to include both versions in my index.  Instead of creating a "name_not_analyzed" field with the index attribute set, Elasticsearch allows us to set up Multifields.
+
+Here you can see I've created a "type" field where the index is set to analyzed.  But then I can add a "fields" attribute, which let's me set up different versions of this field, with different attributes set.  So I will create a "raw" version of type with the index "not_analyzed" so I can use that multifield to sort upon if I wish to.  I will be able to query this field using type.raw.
+
+I can also add new multifields to an existing field such as name.  Here I am remapping the name attribute with the new "fields" attribute, and creating a raw "not_analyzed" version of name.
+
+Finally, we should refresh our page and load up our Index Metadata to see all of the fields we created in this chapter.  You can see that name has the new raw field added as well.
+
+After recording, I decided I wanted an "evolution" string field with its own raw multifield as well.  So I quickly make that just how I made the "type" multifield.
+
+
+Now that our mappings are all set up, let's bulk index our pokemon.  I'm opening up pokemon_bulk.json from the chapter --EDIT--6--/EDIT-- files to show you what the data looks like for indexing pokemon with these fields.  Note how some of the values are in array format.  This allows us to index multiple values for a single field and Elasticsearch will automatically handle setting them up as a list when indexed.  Don't worry though, as queries on these fields will work the same regardless of if you have one or multiple values.
+
+I also want to show that at this time I have only populated data for the first 18 pokemon.  I'd like to thank Bulbapedia for most of the data used within our sample data set.  Please see their link in the video description!  But I populated as many as we need to run some queries.
+
+Now let's close this file and run our bulk API call.  Now the script has added all of our pokemon to the index, but you'll notice the doc count is much higher than the 151 in the file.  The additional documents being counted are those created for the "nested" type.  Each of the 18 I created have 4 "how_to_find" values, so that added a significant number to the total doc count.  So let's load up Bulbasaur and see how all of the fields and their values will now appear in the index.  You can see all of our different types here with their appropriate values.
+
+Now let's run some queries!  Remember our friend Nidoran from Chapter 3?  We ran into issues with him using a match query, because we got two results back, the male and female versions.  So now let's try a term, or exact, query on Nidoran, which gets us no results.  This is because the regular "name" field is analyzed, and term queries only work with "not_analyzed" fields, so let's try querying the raw field to look for an exact match.  Still no results, because no pokemon has the exact name of Nidoran.  They each have a gender symbol after their names.  So let's add the female gender symbol which I copied from the bulk JSON and run the term query again and viola we were able to get exactly the pokemon we were looking for.  Symbols like this would be stripped in regular cases, but when a string is not analyzed, it keeps the symbols in their respective places i nthe string.
+
+Now let's do a type.raw term query to ask Elasticsearch to return all pokemon that have the exact type of Poison set.  We actually have 6 poison pokemon, as in some games Bulbasaur and its evolutions are considered Poison Type pokemon, plus some of the other earlier pokemon are also Poison.
+
+See how Bulbasaur has a few HMs?  Let's run a query on the object field to get all pokemon that can use HM01.  I have to switch this back to a match query since the fields within HMs are analyzed, and run a query on hm.id to specifically point at that field in the object.  HM01 seems to be flexible, as 7 of our 18 test pokemon can use it!  And you'll see if I do a query on hm.name equals Cut, we get the same number of results.
+
+Now I'm going to use the How To Find field to help explain the importance of nested types.  If I were to run a nested query to find all pokemon where game is Red and method is Time Capsule, Blastoise would not be a result because there is no individual nested object that satisfies both game equals Red and method equals Time Capsule.  If we ran the same query but as a regular query, not a nested query, Blastoise would be a result because at least one game and one method would match the query.  But in order to get Blastoise back in a Nested query, we would have to run a query such as game equals red and method equals evolve.  See how they both exist in one nested document?  We will go over how to build nested queries later in the series, but I wanted to use this example to help you understand the difference between object and nested types.
+
+We can still query nested types like object types though.  Here we can query for all pokemon available in the Red game, which is all of our current pokemon.
+
+
+This concludes chapter 6.  In this chapter, we learned how to set up an object type, a nested type, and multifields.  We then ran some queries to help us better understand the usefulness of these new types, as well as the benefit of using multifields.
+
+In the next chapter, we will be looking at paginating our result set, and sorting our results using the fields we created in this chapter.
+
+Okay, this video of the Siteworx Elasticsearch Developer Focus is all wrapped up.  Thanks for watching and continuing to join me, Jim, in our quest to understand Elasticsearch.  Have a great day.
