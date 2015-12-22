@@ -1,3 +1,5 @@
+Copyright © 2015. Siteworx, LLC. All Rights Reserved.
+
 Welcome back, everyone, to the Siteworx Developer Focus Elasticsearch Series.  This is your host, Jim, Senior Developer at Siteworx.  I'm glad to see you've returned.
 
 Before we begin, let's recap.  The first ***FOUR*** chapters of this series helped get your feet wet and covered the basics of setting up Elasticsearch, including creating an index and type, as well as indexing and querying documents.  We also chose to use Pokemon as our data set and we're going to move forward with it into our next chapter, which is

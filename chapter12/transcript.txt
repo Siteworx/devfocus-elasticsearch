@@ -1,3 +1,5 @@
+Copyright © 2015. Siteworx, LLC. All Rights Reserved.
+
 Welcome to the last base chapter of the Siteworx Developer Focus Elasticsearch series.  Join me, Jim, Senior Developer at Siteworx, in finishing up our introduction to Elasticsearch.  While we are going out with a bang, don't worry, this is far from goodbye.
 
 Let's recap the entire series, shall we?  We created our index, type, and fields using a variety of field types for our Generation 1 Pokemon dataset.  We learned how to index individual pokemon as well as bulk index all of them.  We ran both simple and complex queries, and combined them using the Bool query.  We learned how to paginate and sort our results.  I feel like there is one more major feature to go over to round out this series, and that is

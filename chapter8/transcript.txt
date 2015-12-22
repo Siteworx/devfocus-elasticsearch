@@ -1,3 +1,5 @@
+Copyright © 2015. Siteworx, LLC. All Rights Reserved.
+
 Things are getting pretty interesting here at the Siteworx Developer Focus Elasticsearch Series.  Let me, Jim, Senior Developer here at Siteworx, tell you all about it.  Take a seat, we're going to be here for a few minutes.
 
 Quick Recap time: we've set up an index, type, and fields.  We bulk indexed our data and we've run a variety of queries.  We've also sorted and paginated our results.  Dataset: Gen 1 Pokemon.  Now, we'll be continuing to learn some more fun ways to query in

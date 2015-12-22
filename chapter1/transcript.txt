@@ -1,3 +1,5 @@
+Copyright © 2015. Siteworx, LLC. All Rights Reserved.
+
 00:00 - 00:20
 
 Hello and welcome to Siteworx Developer Focus.  My name is Jim, I am a Senior Developer at Siteworx, and I will be guiding you through our first Developer Focus series, which is on Elasticsearch.  

@@ -1,3 +1,5 @@
+Copyright © 2015. Siteworx, LLC. All Rights Reserved.
+
 Hello everyone and welcome back to the Siteworx Developer Focus Elasticsearch series.  As always, this is Jim, Senior Developer at Siteworx, and I'm glad to see you've made it today!
 
 Let's recap what we've done so far.  Up to this video, we have created an index and type for our pokemon dataset, and used the Bulk API to mass index some basic information about each pokemon.

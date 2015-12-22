@@ -1,3 +1,5 @@
+Copyright © 2015. Siteworx, LLC. All Rights Reserved.
+
 If you thought the last chapter of the Siteworx Developer Focus Elasticsearch series was intense, prepare to ease yourself into this fun chapter.  I, Jim, Senior Developer at Siteworx, am especially looking forward to what's next.
 
 If you are just joining now, here's what we've done so far.  We have an index, type, and fields set up, and a way to bulk index our content.  We've queried from match to bool, sorted, and paginated.  We are using Generation 1 pokemon as our dataset.  Last chapter we wrote a bool query which is a large, structured JSON, and the most proper, efficient, and accurate way to combine multiple queries in Elasticsearch.  Now let's do the same thing but less formally using 

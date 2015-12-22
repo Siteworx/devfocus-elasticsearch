@@ -1,3 +1,5 @@
+Copyright © 2015. Siteworx, LLC. All Rights Reserved.
+
 Hello everyone and welcome back to the Siteworx Developer Focus Elasticsearch series.  As always, this is Jim, Senior Developer at Siteworx, as your host and guide on your elasticsearch adventure.
 
 Just to quickly recap what we've done so far, we have created a pokedex index, with a pokemon type, and indexed a few pokemon.  We also directly queried those pokemon.  Oh, and we decided to use pokemon as our sample content.

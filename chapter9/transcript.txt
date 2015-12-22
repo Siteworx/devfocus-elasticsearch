@@ -1,3 +1,5 @@
+Copyright © 2015. Siteworx, LLC. All Rights Reserved.
+
 I hope you're ready for one of the more intense chapters of the Siteworx Developer Focus Elasticsearch Series.  Don't worry, let me, Jim, Senior Developer, explain it to you to the best of my ability.
 
 Recap time!: Index, type, and fields all set up.  Data is indexed and we've run all sorts of queries, sorted, and paginated.  We love Gen 1 Pokemon and don't plan to stop using them yet.  Now, it's time for all of our queries to join forces for us to create

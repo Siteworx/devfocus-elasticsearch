@@ -1,3 +1,5 @@
+Copyright © 2015. Siteworx, LLC. All Rights Reserved.
+
 Siteworx Developer Focus Elasticsearch Series: For all your open source search needs.  This is your host, Jim, Senior Developer at Siteworx.  Are you ready?  Because I'm ready.
 
 Let's start with a quick recap.  As of this video, we've set up our index, type, and basic fields for our sample dataset which is the list of Generation 1 Pokemon.  We've also indexed them and run a few queries to help us understand the benefits of setting up our index as we have so far.  Now let's move onto our next chapter, which is

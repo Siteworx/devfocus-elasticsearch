@@ -1,3 +1,5 @@
+Copyright © 2015. Siteworx, LLC. All Rights Reserved.
+
 As the Elasticsearch documentation states, an index is a collection of documents that are very similar in nature. Common types of indexes are collections of web pages, or user information, or you might find some sites using one for the products in their catalog.  After much discussion and debate with my fellow developers, we have come to the decision that our example data set for this series would be a tribute one of the greatest indexes of our time, the Pokedex.  So we will be creating our own pokedex, or index of pokemon, to use as our data set for this series.
 
 
